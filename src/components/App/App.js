@@ -15,11 +15,11 @@ class App extends Component {
       toBeCleared: null,
     };
   }
-  render(playing) {
+  render() {
     return (
       <div className="App">
         <header className="App-header">Turbo-Matcher</header>
-        <OptionsPanel playing={playing} numTiles={this.props.numTiles} />
+        <OptionsPanel playing={this.state.playing} numTiles={this.props.numTiles} />
         <Board numTiles={this.props.numTiles} tiles={this.props.tiles} />
       </div>
     );
