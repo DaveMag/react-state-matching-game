@@ -17,23 +17,20 @@ class App extends Component {
     };
   }
 
-  startGame(numTiles) {
-    this.setState(
-      function (state) {
-      return {
+  startGame = (numTiles) => {
+    this.setState((state) => ({
         playing: true,
         previousTileIndex: null,
         toBeCLeared: null,
         tiles: createTiles(state.numTiles)
-      }
-    })
+    }))
   }
 
   render() {
     return (
       <div className="App">
         <header className="App-header">Turbo-Matcher</header>
-        <OptionsPanel playing={this.state.playing} numTiles={this.state.numTiles} startGame={this.startGame()} />
+        <OptionsPanel playing={this.state.playing} numTiles={this.state.numTiles} startGame={this.startGame} />
         <Board numTiles={this.state.numTiles} tiles={this.state.tiles} />
       </div>
     );
