@@ -10,7 +10,7 @@ const Tile = (props) => {
       className="Tile"
       style={dynamicColor}
       onClick={() => {
-        props.handleTileClicked(props.id, props.color);
+        props.handleTileClicked(props.id, props.color)
       }}
     >
       {props.selected || props.matched ? <props.svg /> : null}

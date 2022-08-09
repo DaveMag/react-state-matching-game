@@ -7,7 +7,8 @@ import "./App.css";
 
 class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
+
     this.state = {
       numTiles: 36,
       playing: false,
@@ -51,15 +52,13 @@ class App extends Component {
         previousTileIndex = selectedTileIndex;
       }
 
-      selectTile.selected = true
-
       return {
         toBeCleared,
         tiles,
         previousTileIndex,
-      };
-    });
-  };
+      }
+    })
+  }
 
   startGame = (numTiles) => {
     this.setState((state) => ({
